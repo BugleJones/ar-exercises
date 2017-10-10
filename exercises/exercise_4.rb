@@ -19,7 +19,7 @@ yale_store = Store.create name: "Yaletown", annual_revenue: 430000,  mens_appare
 @womens_stores = Store.where(womens_apparel: true)
 
     @womens_stores.each do |store|
-        if store.revenue < 1000000
+        if store.annual_revenue < 1000000
             puts "Our #{store.name} store has an annual revenue of $#{store.annual_revenue}"
         end
     end
