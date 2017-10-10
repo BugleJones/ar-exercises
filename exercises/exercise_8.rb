@@ -5,20 +5,15 @@ require_relative './exercise_3'
 require_relative './exercise_4'
 require_relative './exercise_5'
 require_relative './exercise_6'
+require_relative './exercise_7'
 
-puts "Exercise 7"
-puts "----------"
+new_emp = @store1.employees.create first_name: "Reginald", last_name: "Gemma", hourly_rate: 60
 
-p "Please provide a store name"
+p new_emp
 
-# @choice = gets.chomp
-
-# new_store = Store.new name: "#{@choice}"
-
-# p new_store
-
-# if new_store.valid?
-#     new_store.save
+# if new_employee.valid?
+#     new_employee.save
 # else
-#     puts new_store.errors.full_messages
+#     puts new_employee.errors.full_messages
 # end
+
