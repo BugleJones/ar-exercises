@@ -13,11 +13,15 @@ p "Please provide a store name"
 
 @choice = gets.chomp
 
-new_store = Store.create name: @choice
+new_store = Store.new name: "#{@choice}"
 
+p new_store
 
-
-
+if new_store.valid?
+    new_store.save
+else
+    puts new_store.errors.full_messages
+end
 
 
 # 1. Add validations to two models to enforce the following business rules:
